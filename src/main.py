@@ -56,7 +56,7 @@ def getCSVLine(conn, film_no, review_no, et_html, review_head):
     star = et_html.xpath("//strong[text()='総合評価']/../../li[2]/span/i/@class")
     star = get_value(star)
     if star != "":
-        star = int(star.replace("star-actived rate-",""))//40
+        star = int(star.replace("star-actived rate-",""))//20
 
     #閲覧数
     views = et_html.xpath("//i[@title='閲覧数']/../strong/text()")
